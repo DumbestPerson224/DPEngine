@@ -20,7 +20,7 @@ public:
 
 	void decrease_strength(float scopeX, float scopeY, float scopeZ, float scopeSpeed, float opponentX, float opponentY, float opponentZ, float opponentDistance, float opponentSpeed) {
 		if (isAimAssistOn()) {
-			strength -= (std::pow(std::fabs(scopeX - opponentX) + std::fabs(scopeY - opponentY - 1) + std::fabs(scopeZ - opponentZ - 1) + std::fabs(opponentSpeed - scopeSpeed) / opponentDistance, 2));
+			strength += (std::pow(std::fabs(scopeX - opponentX) + std::fabs(scopeY - opponentY - 1) + std::fabs(scopeZ - opponentZ - 1) + std::fabs(opponentSpeed - scopeSpeed) / opponentDistance, 2));
 		}
 	}
 
